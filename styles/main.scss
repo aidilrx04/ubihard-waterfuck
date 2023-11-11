@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.content {
+  font-family: Inter, Arial, sans-serif;
+
+  display: flex;
+  gap: 32px;
+  justify-content: start;
+  align-items: start;
+
+  color: #475569;
+
+  section {
+    margin-bottom: 48px;
+
+    .title {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: #1e293b;
+    }
+
+    p {
+      margin-bottom: 24px;
+
+      color: #475569;
+    }
+  }
+  main {
+    width: 70%;
+    margin-left: 20px;
+    padding: 16px;
+    background-color: #f8fafc;
+
+    section.location {
+      .details {
+        display: flex;
+        justify-items: center;
+        margin-top: 24px;
+
+        p {
+          display: flex;
+          align-items: start;
+          gap: 16px;
+        }
+
+        i {
+          font-size: 32px;
+          color: #0284c7;
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 30%;
+    margin-right: 20px;
+    padding: 16px;
+    background-color: #f8fafc;
+
+    .customer-reviews {
+      .title {
+        margin-bottom: 12px;
+      }
+
+      .rating {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .stars {
+          font-size: 24px;
+          color: #fcd34d;
+          margin-right: 12px;
+          display: flex;
+        }
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+      .reviews {
+        .review {
+          margin-bottom: 28px;
+
+          .profile {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+
+            .avatar {
+              width: 50px;
+              height: 50px;
+              background-color: gray;
+              border-radius: 50%;
+
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .information {
+              .name {
+                margin-bottom: 8px;
+                color: #0f172a;
+              }
+
+              .rate {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                i.ph-star {
+                  color: #fcd34d;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

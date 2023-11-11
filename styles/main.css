@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.content {
+  font-family: Inter, Arial, sans-serif;
+  display: flex;
+  gap: 32px;
+  justify-content: start;
+  align-items: start;
+  color: #475569;
+}
+.content section {
+  margin-bottom: 48px;
+}
+.content section .title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #1e293b;
+}
+.content section p {
+  margin-bottom: 24px;
+  color: #475569;
+}
+.content main {
+  width: 70%;
+  margin-left: 20px;
+  padding: 16px;
+  background-color: #f8fafc;
+}
+.content main section.location .details {
+  display: flex;
+  justify-items: center;
+  margin-top: 24px;
+}
+.content main section.location .details p {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+.content main section.location .details i {
+  font-size: 32px;
+  color: #0284c7;
+}
+.content aside {
+  width: 30%;
+  margin-right: 20px;
+  padding: 16px;
+  background-color: #f8fafc;
+}
+.content aside .customer-reviews .title {
+  margin-bottom: 12px;
+}
+.content aside .customer-reviews .rating {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.content aside .customer-reviews .rating .stars {
+  font-size: 24px;
+  color: #fcd34d;
+  margin-right: 12px;
+  display: flex;
+}
+.content aside .customer-reviews .rating span {
+  font-size: 16px;
+}
+.content aside .customer-reviews .reviews .review {
+  margin-bottom: 28px;
+}
+.content aside .customer-reviews .reviews .review .profile {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.content aside .customer-reviews .reviews .review .profile .avatar {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 50%;
+}
+.content aside .customer-reviews .reviews .review .profile .avatar img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content aside .customer-reviews .reviews .review .profile .information .name {
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+.content aside .customer-reviews .reviews .review .profile .information .rate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.content aside .customer-reviews .reviews .review .profile .information .rate i.ph-star {
+  color: #fcd34d;
+}

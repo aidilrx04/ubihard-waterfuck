@@ -1,0 +1,120 @@
+.slides-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+
+  &:hover .slide.active {
+    & img {
+      filter: brightness(50%);
+      scale: 1.1;
+    }
+
+    & .caption {
+      opacity: 1;
+    }
+  }
+
+  .slide {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      transition: filter 0.6s ease, scale 0.6s ease;
+    }
+    .caption {
+      opacity: 0;
+      transition: 0.6s ease;
+      color: #f1f5f9;
+      font-size: 24px;
+      padding: 8px 12px;
+      position: absolute;
+      left: 50%;
+      bottom: 30%;
+      translate: -50% 0%;
+      text-align: center;
+      max-width: 80%;
+      width: 80%;
+
+      h3 {
+        color: #f1f5f9;
+      }
+
+      p {
+        color: #e2e8f0;
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    border: 0;
+    user-select: none;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .dots {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      transition: background-color 0.6s ease;
+
+      &.active,
+      &:hover {
+        background-color: #717171;
+      }
+    }
+  }
+
+  .fade {
+    animation: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
