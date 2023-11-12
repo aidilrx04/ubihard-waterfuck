@@ -19,47 +19,76 @@
         alt="Sunway aerial view"
       />
 
+      <video loop muted class="background">
+        <source src="./videos/sunway-trailer.mp4" type="video/mp4" />
+        Your browser does not support the video tag
+      </video>
+
       <div class="bg-mask"></div>
 
-      <div class="content">
-        <div class="main-image">
-          <img src="./images/sunway-main.jpg" alt="Sunway main" />
-        </div>
-        <div class="details">
-          <div class="flex">
-            <div class="left">
-              <div class="title">
-                <h1>Sunway Lagoon</h1>
-                <p>RM 180 - 215</p>
-              </div>
-            </div>
-            <div class="cta">
-              <button class="booknow">Book Now</button>
-              <div class="rating">
-                <div class="stars">
-                  <i class="ph-fill ph-star"></i>
-                  <i class="ph-fill ph-star"></i>
-                  <i class="ph-fill ph-star"></i>
-                  <i class="ph-fill ph-star"></i>
-                  <i class="ph-fill ph-star-half"></i>
-                </div>
-                <span>4.5 / 5</span>
-              </div>
-            </div>
+      <div class="content-container">
+        <button class="trailer-toggler">
+          <span>Play Trailer</span>
+          <i class="ph ph-play"></i>
+        </button>
+        <div class="content">
+          <script>
+            const hero = document.querySelector(".hero");
+            const trailerToggler = hero.querySelector(".trailer-toggler");
+            const videoElement = hero.querySelector("video");
+
+            trailerToggler.addEventListener("click", () => {
+              hero.classList.toggle("video");
+
+              if (hero.classList.contains("video")) {
+                videoElement.play();
+                trailerToggler.innerHTML = `<span>Pause</span><i class="ph ph-pause"></i>`;
+              } else {
+                videoElement.pause();
+                trailerToggler.innerHTML = `<span>Play Trailer</span><i class="ph ph-play"></i>`;
+              }
+            });
+          </script>
+
+          <div class="main-image">
+            <img src="./images/sunway-main.jpg" alt="Sunway main" />
           </div>
-          <p class="description">
-            <span>
-              We are the one-stop place for fun over 90 attractions spread
-              across 88 acres, Sunway Lagoon provides the ultimate theme park
-              experience in 5 adventure zones — Water Park, Amusement Park,
-              Wildlife Park, Extreme Park & Scream Park . Come experience them
-              all by booking your tickets online.
-            </span>
-          </p>
-          <div class="images">
-            <img src="./images/sunway-1.jpg" alt="Sunway 1" />
-            <img src="./images/sunway-2.webp" alt="Sunway 2" />
-            <img src="./images/sunway-3.jpg" alt="Sunway 3" />
+          <div class="details">
+            <div class="flex">
+              <div class="left">
+                <div class="title">
+                  <h1>Sunway Lagoon</h1>
+                  <p>RM 180 - 215</p>
+                </div>
+              </div>
+              <div class="cta">
+                <button class="booknow">Book Now</button>
+                <div class="rating">
+                  <div class="stars">
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star-half"></i>
+                  </div>
+                  <span>4.5 / 5</span>
+                </div>
+              </div>
+            </div>
+            <p class="description">
+              <span>
+                We are the one-stop place for fun over 90 attractions spread
+                across 88 acres, Sunway Lagoon provides the ultimate theme park
+                experience in 5 adventure zones — Water Park, Amusement Park,
+                Wildlife Park, Extreme Park & Scream Park . Come experience them
+                all by booking your tickets online.
+              </span>
+            </p>
+            <div class="images">
+              <img src="./images/sunway-1.jpg" alt="Sunway 1" />
+              <img src="./images/sunway-2.webp" alt="Sunway 2" />
+              <img src="./images/sunway-3.jpg" alt="Sunway 3" />
+            </div>
           </div>
         </div>
       </div>
