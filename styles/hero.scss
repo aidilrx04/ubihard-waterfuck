@@ -139,7 +139,7 @@
         .cta {
           width: 40%;
 
-          button.booknow {
+          .booknow {
             color: #fff;
             text-align: center;
             font-family: Inter;
@@ -147,6 +147,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            text-decoration: none;
 
             // padding
             display: block;

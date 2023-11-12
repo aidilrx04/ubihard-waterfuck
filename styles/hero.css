@@ -117,7 +117,7 @@
 .hero .content .details .flex .cta {
   width: 40%;
 }
-.hero .content .details .flex .cta button.booknow {
+.hero .content .details .flex .cta .booknow {
   color: #fff;
   text-align: center;
   font-family: Inter;
@@ -125,6 +125,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-decoration: none;
   display: block;
   padding: 24px 48px;
   background-color: #00beb8;
@@ -134,13 +135,13 @@
   cursor: pointer;
   transition: 0.6 ease;
 }
-.hero .content .details .flex .cta button.booknow:hover {
+.hero .content .details .flex .cta .booknow:hover {
   translate: 0 -2px;
   box-shadow: 0px 4px 8px #020617;
   background-color: #00c8c2;
   transition: 0.25s;
 }
-.hero .content .details .flex .cta button.booknow:active, .hero .content .details .flex .cta button.booknow:focus {
+.hero .content .details .flex .cta .booknow:active, .hero .content .details .flex .cta .booknow:focus {
   background-color: #00b4ae;
 }
 .hero .content .details .flex .cta .rating {

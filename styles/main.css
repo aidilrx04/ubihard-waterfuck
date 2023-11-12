@@ -40,6 +40,33 @@
   font-size: 32px;
   color: #0284c7;
 }
+.content main .booknow {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  display: block;
+  padding: 24px 48px;
+  background-color: #00beb8;
+  border: 0;
+  width: 100%;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: 0.6 ease;
+}
+.content main .booknow:hover {
+  translate: 0 -2px;
+  box-shadow: 0px 4px 8px #020617;
+  background-color: #00c8c2;
+  transition: 0.25s;
+}
+.content main .booknow:active, .content main .booknow:focus {
+  background-color: #00b4ae;
+}
 .content aside {
   width: 30%;
   margin-right: 20px;
