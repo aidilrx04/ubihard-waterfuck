@@ -19,7 +19,7 @@
         alt="Sunway aerial view"
       />
 
-      <video loop class="background">
+      <video loop class="background" controls>
         <source src="./videos/sunway-trailer.mp4" type="video/mp4" />
         Your browser does not support the video tag
       </video>
@@ -32,24 +32,6 @@
           <i class="ph ph-play"></i>
         </button>
         <div class="content">
-          <script>
-            const hero = document.querySelector(".hero");
-            const trailerToggler = hero.querySelector(".trailer-toggler");
-            const videoElement = hero.querySelector("video");
-
-            trailerToggler.addEventListener("click", () => {
-              hero.classList.toggle("video");
-
-              if (hero.classList.contains("video")) {
-                videoElement.play();
-                trailerToggler.innerHTML = `<span>Pause</span><i class="ph ph-pause"></i>`;
-              } else {
-                videoElement.pause();
-                trailerToggler.innerHTML = `<span>Play Trailer</span><i class="ph ph-play"></i>`;
-              }
-            });
-          </script>
-
           <div class="main-image">
             <img src="./images/sunway-main.jpg" alt="Sunway main" />
           </div>
@@ -193,7 +175,7 @@
         </section>
 
         <section class="location">
-          <h2 class="title">Location</h2>
+          <h2 class="title">More Information</h2>
 
           <div
             class="details"
@@ -241,8 +223,9 @@
             href="https://sunwaylagoon.com/etickets/"
             target="_blank"
             class="booknow"
-            >Book Now</a
           >
+            Book Now
+          </a>
         </section>
       </main>
       <aside>
@@ -438,7 +421,7 @@
       </div>
     </footer>
 
-    <!-- <script src="./slide.js" defer></script> -->
+    <script src="./trailer.js"></script>
     <script src="./slide.js"></script>
     <script defer>
       registerSlide("slide-events");

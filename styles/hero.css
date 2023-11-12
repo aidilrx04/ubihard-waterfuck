@@ -10,6 +10,7 @@
 }
 .hero img.background,
 .hero video.background {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;

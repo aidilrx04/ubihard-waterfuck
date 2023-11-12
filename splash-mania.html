@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SplashMania | Ubihard</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/slide.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <img
+        src="./images/splashmania-aerial.jpg"
+        alt="Splashmania aerial view "
+        class="background"
+      />
+
+      <video loop class="background">
+        <source src="./videos/video_splashmania.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="bg-mask"></div>
+
+      <div class="content-container">
+        <button class="trailer-toggler">
+          <span>Play Trailer</span>
+          <i class="ph ph-play"></i>
+        </button>
+        <div class="content">
+          <div class="main-image">
+            <img src="./images/splashmania-1.webp" alt="SplashMania main" />
+          </div>
+          <div class="details">
+            <div class="flex">
+              <div class="left">
+                <div class="title">
+                  <h1>SplashMania</h1>
+                  <p>RM 95 - 125</p>
+                </div>
+              </div>
+              <div class="cta">
+                <a
+                  href="https://tix.glplay.com.my/attraction/splashmania"
+                  class="booknow"
+                  target="_blank"
+                >
+                  Book Now
+                </a>
+                <div class="rating">
+                  <div class="stars">
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star-half"></i>
+                  </div>
+                  <span>4.7 / 5</span>
+                </div>
+              </div>
+            </div>
+            <p>
+              This waterpark where nature meets fun features first-of-its-kind
+              attractions with award-winning water slides and entertainment
+              offerings that will elevate experiences to new heights.
+              <br /><br />
+              Home to 39 exhilarating slides and attractions that cater to
+              families, students, young working adults and thrill seekers of all
+              kinds, this waterpark is located in Gamuda Cove, Selangor. Within
+              close proximity to KLIA and surrounding cities, SplashMania is
+              slated to become an international destination once its doors open.
+              <br /><br />
+              Plan your visit to make the most of your day with activities
+              <br /><br />
+              Thursday - Tuesday : 10am - 6pm
+              <br /><br />
+              (Closed on Wednesday EXCEPT during Malaysia public holidays and
+              school holidays)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <main>
+        <section>
+          <div class="detail">
+            <img
+              src="https://glplay.com.my/web/assets/general/Splashmania-Park-Map-4.jpg"
+              alt="Your Image"
+            />
+            <div
+              class="marker marker1"
+              onclick="showInfo('Spills & Thrills', './images/splashmania-1.webp','A racing and adrenaline-filled waterslide with family rafts atop a curved bowl.')"
+            >
+              1
+            </div>
+            <div
+              class="marker marker2"
+              onclick="showInfo('Sumaumeira Drop','./images/splashmania-2.webp','Experience a sudden drop from the top into curving high-speed body slides.' )"
+            >
+              2
+            </div>
+            <div
+              class="marker marker3"
+              onclick="showInfo('Omba King Cove','./images/splashmania-3.jpg','Relax on a raft, or take a dip in a pool made to simulate the wave current of the seas.' )"
+            >
+              3
+            </div>
+            <div
+              class="marker marker4"
+              onclick="showInfo('Treasure Tower','./images/splashmania-4.jpg','Massive slide combo that fuses multiple flumes and splash buckets.' )"
+            >
+              4
+            </div>
+            <div
+              class="marker marker5"
+              onclick="showInfo('Ravage River','./images/splashmania-5.jpg','Explore rides from different elements' )"
+            >
+              5
+            </div>
+            <div class="info-box" id="infoBox"></div>
+          </div>
+          <script>
+            function showInfo(message, imagePath, description) {
+              const detailRect = document
+                .querySelector(".detail")
+                .getBoundingClientRect();
+
+              var infoBox = document.getElementById("infoBox");
+              infoBox.innerHTML = `<h1>${message}</h1><img src="${imagePath}" alt="Image"><p>${description}</p>`;
+              infoBox.style.display = "block";
+
+              // Set the position of the info box
+              var markerPositionX = event.clientX + 30 - detailRect.x;
+              var markerPositionY = event.clientY + 40 - detailRect.y;
+
+              infoBox.style.left = markerPositionX + "px";
+              infoBox.style.top = markerPositionY + "px";
+            }
+
+            // Hide info box on click outside
+            document.addEventListener("mousedown", function (event) {
+              var infoBox = document.getElementById("infoBox");
+              var clickedElement = event.target;
+
+              // Check if the clicked element is not the info box or any of its descendants
+              if (!infoBox.contains(clickedElement)) {
+                infoBox.style.display = "none";
+              }
+            });
+          </script>
+        </section>
+
+        <section class="location">
+          <h2 class="title">More Information</h2>
+
+          <div class="details" style="display: flex; justify-content: center">
+            <div class="address">
+              <p>
+                <i class="ph ph-map-pin"></i>
+                <span>
+                  Menara Gamuda,PJ Trade Centre, No.8, Jalan PJU 8/8A, Bandar
+                  Damansara Perdana, 47820 Petaling Jaya, Selangor, Malaysia
+                </span>
+              </p>
+              <p>
+                <i class="ph ph-phone"></i>
+                <span>012-9321811</span>
+              </p>
+              <p>
+                <i class="ph ph-clock"></i>
+                <span>
+                  Operation hours
+                  <br />
+                  <br />
+                  Open Thurs - Tue: 10.00am till 6.00pm
+                  <br /><br />
+                  Closed every Wednesday, except on Malaysian School & Public
+                  holidays
+                </span>
+              </p>
+            </div>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.748076805304!2d101.6138416744704!3d2.888826654698784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb7057b2f621d%3A0xa82fe8b07ff5bb59!2sSplashMania%20WaterPark!5e0!3m2!1sen!2smy!4v1699779324482!5m2!1sen!2smy"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <a
+            href="https://tix.glplay.com.my/attraction/splashmania"
+            class="booknow"
+            target="_blank"
+          >
+            Book Now
+          </a>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="brand">
+        <span class="title">Ubihard</span>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione est
+          eligendi inventore ipsa nihil consequuntur amet dicta sequi,
+          asperiores dolorem eveniet. Nam consequuntur sed, sit quisquam tenetur
+          molestias molestiae nihil?
+        </p>
+      </div>
+      <div class="links">
+        <div class="title">Links</div>
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#destinations">Destinations</a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <div class="title">Contact Us</div>
+        <ul>
+          <li>
+            <i class="ph ph-map-pin"></i>
+            <span>Sungai Lang, 45100 Sungai Ayer Tawar, Selangor</span>
+          </li>
+          <li>
+            <i class="ph ph-phone"></i>
+            <span>03-3280 6200</span>
+          </li>
+          <li>
+            <i class="ph ph-clock"></i>
+            <span>Mon-Fri, 8.00am - 5.00pm</span>
+          </li>
+        </ul>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.9945580952!2d100.81654427497426!3d3.8112552961625794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cb5a93916d2d37%3A0xe2b44ff8c542624b!2sPoliteknik%20Sultan%20Idris%20Shah!5e0!3m2!1sen!2smy!4v1699721050186!5m2!1sen!2smy"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+
+    <script src="./trailer.js"></script>
+  </body>
+</html>
