@@ -1,12 +1,17 @@
 console.log("balls2 ");
 
+// register id that contains image element
+// to create slide/carousel
 const registerSlide = (id) => {
+  // get container
   const container = document.querySelector(`#${id}`);
 
   let slideIndex = 1;
 
+  // get images
   const slides = container.querySelectorAll(".slide");
 
+  // create and add prev button to container
   const prevBtn = document.createElement("button");
   prevBtn.classList.add("prev");
   prevBtn.innerHTML = `<i class="ph-bold ph-caret-left"></i>`;
@@ -16,6 +21,7 @@ const registerSlide = (id) => {
   });
   container.appendChild(prevBtn);
 
+  // create and add nex button to container
   const nextBtn = document.createElement("button");
   nextBtn.classList.add("next");
   nextBtn.innerHTML = `<i class="ph-bold ph-caret-right"></i>`;
@@ -25,12 +31,14 @@ const registerSlide = (id) => {
   });
   container.appendChild(nextBtn);
 
+  // create and add dots button to container
   const dotsContainer = document.createElement("div");
   dotsContainer.classList.add("dots");
   container.appendChild(dotsContainer);
 
   const dots = [];
   for (let i = 0; i < slides.length; i++) {
+    // create dot for each image
     const dot = document.createElement("span");
     dot.classList.add("dot");
     dot.dataset.slide = i + 1;
@@ -48,6 +56,7 @@ const registerSlide = (id) => {
     dotsContainer.appendChild(dot);
   }
 
+  // function to show slide
   function showSlides() {
     let i;
     if (slideIndex > slides.length) {
@@ -69,5 +78,6 @@ const registerSlide = (id) => {
     dots[slideIndex - 1].classList.add("active");
   }
 
+  // call default of the first slide image
   showSlides();
 };
