@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* Background image for the entire website */
+body {
+  background-image: url("../images/bgDestination-04.jpg"); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+/* Style for the content */
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin-top: 1%;
+}
+
+.content {
+  grid-column: 1 / span 1;
+  text-align: left;
+  padding: 0 20px;
+  margin-top: 15%;
+}
+
+.content h2 {
+  font-size: 24px;
+  color: white;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+.content h1 {
+  font-size: 100px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+  font-weight: normal;
+}
+
+/* Style for the destination boxes */
+.destinations {
+  /* grid-column: 2 / span 1; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.destination-box {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-family: Inter, Arial, sans-serif;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.destination-box img {
+  width: 100%;
+  /* height: auto; */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.destination-box h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.destination-box p {
+  font-size: 14px;
+  margin: 0;
+}
