@@ -11,11 +11,25 @@ footer {
 footer .brand {
   width: 40%;
 }
-footer .brand .title {
-  display: block;
+footer .brand .top {
+  display: flex;
+  align-items: center;
   margin-bottom: 36px;
+  gap: 20px;
+}
+footer .brand .top img {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+footer .brand .top .title {
+  display: block;
   font-size: 42px;
   color: #38bdf8;
+}
+footer .brand p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
 }
 footer .links {
   width: 20%;
